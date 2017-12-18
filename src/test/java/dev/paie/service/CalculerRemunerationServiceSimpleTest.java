@@ -1,4 +1,4 @@
-package dev.paie.util;
+package dev.paie.service;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.CoreMatchers.equalTo;
@@ -7,6 +7,7 @@ import org.hamcrest.core.IsEqual;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -26,6 +27,7 @@ public class CalculerRemunerationServiceSimpleTest {
 	private CalculerRemunerationService remunerationService;
 	
 	@Autowired
+	@Qualifier("bulletin1")
 	BulletinSalaire bulletin1;
 
 
