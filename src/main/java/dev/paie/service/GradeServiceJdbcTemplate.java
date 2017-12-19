@@ -43,7 +43,7 @@ public class GradeServiceJdbcTemplate implements GradeService {
 
 	public class GradeMapper implements RowMapper<Grade> {
 		public Grade mapRow(ResultSet rs, int rowNum) throws SQLException {
-			Grade g = new Grade();
+			Grade g = new Grade(rowNum, null, null, null);
 			g.setId(rs.getInt("ID"));
 			g.setCode(rs.getString("CODE"));
 			g.setNbHeuresBase(rs.getBigDecimal("nbHeureBase"));

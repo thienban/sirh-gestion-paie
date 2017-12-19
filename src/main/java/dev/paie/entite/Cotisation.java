@@ -2,6 +2,11 @@ package dev.paie.entite;
 
 import java.math.BigDecimal;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="Cotisation")
 public class Cotisation {
 	
 	private Integer id;
