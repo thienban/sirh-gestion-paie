@@ -56,7 +56,7 @@ public class CotisationServiceJpa implements CotisationService {
 
 	public class GradeMapper implements RowMapper<Grade> {
 		public Grade mapRow(ResultSet rs, int rowNum) throws SQLException {
-			Grade q = new Grade(rowNum, null, null, null);
+			Grade q = new Grade();
 			q.setId(rs.getInt("ID"));
 			q.setCode(rs.getString("CODE"));
 			q.setNbHeuresBase(rs.getBigDecimal("nbHeureBase"));

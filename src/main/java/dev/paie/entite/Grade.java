@@ -3,13 +3,6 @@ package dev.paie.entite;
 import java.math.BigDecimal;
 
 public class Grade {
-	
-	public Grade(Integer id, String code, BigDecimal nbHeuresBase, BigDecimal tauxBase) {
-		this.id = id;
-		this.code = code;
-		this.nbHeuresBase = nbHeuresBase;
-		this.tauxBase = tauxBase;
-	}
 	private Integer id;
 	private String code;
 	private BigDecimal nbHeuresBase;

@@ -9,6 +9,12 @@ import javax.persistence.Table;
 @Table(name="Cotisation")
 public class Cotisation {
 	
+	public Cotisation(String code, String libelle, BigDecimal tauxSalarial, BigDecimal tauxPatronal) {
+		this.code = code;
+		this.libelle = libelle;
+		this.tauxSalarial = tauxSalarial;
+		this.tauxPatronal = tauxPatronal;
+	}
 	private Integer id;
 	private String code;
 	private String libelle;

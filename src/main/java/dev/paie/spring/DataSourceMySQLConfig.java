@@ -12,7 +12,7 @@ public class DataSourceMySQLConfig {
 	public DataSource dataSource() {
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
 		dataSource.setDriverClassName("org.mariadb.jdbc.Driver");// Todo mariaDB
-		dataSource.setUrl("jdbc:mariadb://localhost:3306/sirh-paie?useSSL=false");
+		dataSource.setUrl("jdbc:mariadb://localhost:3306/sirh.paie?useSSL=false");
 		dataSource.setUsername("sirh");
 		dataSource.setPassword("sirh");
 		return dataSource;
