@@ -32,16 +32,17 @@ public class GradeServiceJdbcTemplateTest {
 		// TODO vérifier qu'il est possible de récupérer le nouveau grade 
 		List<Grade> grade2Liste = gradeService.lister();
 		assertTrue(grade2Liste.stream().anyMatch(unGrade -> unGrade.getCode().equals("A001")));
-
+		
 		// TODO modifier un grade
-		grade1.setCode("A002");
-		grade1.setNbHeuresBase(new BigDecimal("10"));     
-		grade1.setTauxBase( new BigDecimal("4.0"));
-		gradeService.mettreAJour(grade1);
+		Grade gradeInsere = grade2Liste.stream().filter(unGrade -> unGrade.getCode().equals("A001")).findAny().get(); //trouver par le code
+		gradeInsere.setCode("A002");
+		gradeInsere.setNbHeuresBase(new BigDecimal("10"));     
+		gradeInsere.setTauxBase( new BigDecimal("4.0"));
+		gradeService.mettreAJour(gradeInsere);
 		
 		// TODO vérifier que les modifications sont bien prises en compte
 		List<Grade> grade4 = gradeService.lister();
-		assertTrue(grade2Liste.stream().anyMatch(unGrade -> unGrade.getCode().equals("A002") && unGrade.getNbHeuresBase().compareTo(new BigDecimal("10")) == 0));
+		assertTrue(grade4.stream().anyMatch(unGrade -> unGrade.getCode().equals("A002") && unGrade.getNbHeuresBase().compareTo(new BigDecimal("10")) == 0));
 	
 	}
 }
