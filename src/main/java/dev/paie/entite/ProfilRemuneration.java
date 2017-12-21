@@ -45,12 +45,7 @@ public class ProfilRemuneration {
 	)
 	private List<Avantage> avantages;
 	
-	@OneToMany(mappedBy = "Pro_Re_ID")
-	private Set<RemunerationEmploye> remunerationEmployes;
-	
-	public ProfilRemuneration() {
-		remunerationEmployes = new HashSet<RemunerationEmploye>();
-	}
+
 
 	public Integer getId() {
 		return id;

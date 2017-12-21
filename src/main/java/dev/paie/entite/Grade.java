@@ -27,14 +27,6 @@ public class Grade {
 	@Column
 	private BigDecimal tauxBase;
 	
-	@OneToMany(mappedBy = "GRADE_ID")
-	private Set<RemunerationEmploye> remunerationEmployes;
-	
-	public Grade() {
-		remunerationEmployes = new HashSet<RemunerationEmploye>();
-	}
-	
-	
 	public String getCode() {
 		return code;
 	}

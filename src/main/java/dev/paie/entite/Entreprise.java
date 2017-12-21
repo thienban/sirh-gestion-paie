@@ -32,12 +32,6 @@ public class Entreprise {
 	@Column
 	private String codeNaf;
 	
-	@OneToMany(mappedBy = "E_ID")
-	private Set<RemunerationEmploye> remunerationEmployes;
-	
-	public Entreprise() {
-		remunerationEmployes = new HashSet<RemunerationEmploye>();
-	}
 	
 	public String getDenomination() {
 		return denomination;

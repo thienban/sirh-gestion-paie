@@ -1,7 +1,7 @@
 package dev.paie.repository;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.Assert.assertThat;
+
 import static org.junit.Assert.assertTrue;
 
 import java.math.BigDecimal;
@@ -15,7 +15,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import dev.paie.config.ServicesConfig;
 import dev.paie.entite.Avantage;
-import dev.paie.spring.DataSourceMySQLConfig;
 
 @ContextConfiguration(classes = {ServicesConfig.class})
 @RunWith(SpringRunner.class)
@@ -26,7 +25,6 @@ public class AvantageRepositoryTest {
 	@Test
 	public void test_sauvegarder_lister_mettre_a_jour() {
 		Avantage a = new Avantage();
-		int id1 = a.getId();
 		a.setCode("TR");
 		a.setNom("Transport");
 		a.setMontant(new BigDecimal("75.0"));
