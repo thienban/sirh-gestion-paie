@@ -73,7 +73,5 @@
 				<ref bean="sp01" />
 			</util:list>
 		</property>
-
 	</bean>
-
 </beans>
