@@ -15,7 +15,7 @@ import dev.paie.config.ServicesConfig;
 import dev.paie.entite.Cotisation;
 import dev.paie.spring.DataSourceMySQLConfig;
 
-@ContextConfiguration(classes = {ServicesConfig.class, DataSourceMySQLConfig.class})
+@ContextConfiguration(classes = {ServicesConfig.class})
 @RunWith(SpringRunner.class)
 public class CotisationServiceJpaTest {
 	@Autowired
