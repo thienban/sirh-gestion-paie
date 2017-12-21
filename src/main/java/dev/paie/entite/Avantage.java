@@ -26,8 +26,6 @@ public class Avantage {
 	@Column
 	private BigDecimal montant;
 	
-	@ManyToMany(mappedBy="avantages")
-	private List<ProfilRemuneration> profilremuneations;
 
 	public String getCode() {
 		return code;

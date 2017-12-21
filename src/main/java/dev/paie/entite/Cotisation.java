@@ -26,12 +26,6 @@ public class Cotisation {
 	@Column
 	private BigDecimal tauxPatronal;
 	
-	@ManyToMany(mappedBy="cotisationsNonImposables")
-	private List<ProfilRemuneration> profilRemImposables ;
-	
-	@ManyToMany(mappedBy="cotisationsImposables")
-	private List<ProfilRemuneration> profilRemNonImposables  ;
-	
 	public Cotisation() {
 	}
 	
