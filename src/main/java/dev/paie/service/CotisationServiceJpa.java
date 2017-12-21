@@ -15,10 +15,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Service;
 
+import dev.paie.config.JpaConfig;
 import dev.paie.entite.Cotisation;
 import dev.paie.entite.Grade;
 import dev.paie.service.GradeServiceJdbcTemplate.GradeMapper;
-import dev.paie.spring.JpaConfig;
 
 @Service
 @Transactional
