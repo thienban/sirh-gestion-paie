@@ -1,12 +1,39 @@
 package dev.paie.entite;
 
 import java.math.BigDecimal;
+import java.util.HashSet;
+import java.util.Set;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
+@Entity
 public class Grade {
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Integer id;
+	
+	@Column
 	private String code;
+	
+	@Column
 	private BigDecimal nbHeuresBase;
+	
+	@Column
 	private BigDecimal tauxBase;
+	
+	@OneToMany(mappedBy = "GRADE_ID")
+	private Set<RemunerationEmploye> remunerationEmployes;
+	
+	public Grade() {
+		remunerationEmployes = new HashSet<RemunerationEmploye>();
+	}
+	
 	
 	public String getCode() {
 		return code;
