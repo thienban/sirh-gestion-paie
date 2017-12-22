@@ -1,5 +1,7 @@
 package dev.paie.web.controller;
 
+import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
 import java.util.List;
 
 import org.junit.runner.RunWith;
@@ -43,6 +45,9 @@ public class RemunerationEmployeController {
 		mv.setViewName("employes/lister");
 		List<RemunerationEmploye> employe = employeRepository.findAll();
 		mv.addObject("employes", employe);
+	
+		
+		
 
 		return mv;
 	}
@@ -71,6 +76,7 @@ public class RemunerationEmployeController {
 			remunerationEmploye.setGrade(gradeRepository.findOne(grade_id));
 			remunerationEmploye.setEntreprise(entrepriseRepository.findOne(entreprise_id));
 			remunerationEmploye.setProfilRemuneration(profilRepository.findOne(profil_id));
+			remunerationEmploye.setDateCreation(ZonedDateTime.now());
 			employeRepository.save(remunerationEmploye);
 	return "redirect:lister";
 	}

@@ -13,9 +13,9 @@
 	<h1>ICI BIENTOT LISTER !!!!</h1>
 <ul>
 <c:forEach var="emp" items="${employes}">
-	<li>${emp.matricule}</li>
-
+	<li>${emp.matricule} - ${emp.grade.code} -${emp.dateCreation}</li>
 </c:forEach>
+
 </ul>
 </body>
 </html>
