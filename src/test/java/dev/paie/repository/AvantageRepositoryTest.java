@@ -22,7 +22,7 @@ public class AvantageRepositoryTest {
 	@Autowired
 	private AvantageRepository avantageRepository;
 
-	@Test
+	@Test   
 	public void test_sauvegarder_lister_mettre_a_jour() {
 		Avantage a = new Avantage();
 		a.setCode("TR");
