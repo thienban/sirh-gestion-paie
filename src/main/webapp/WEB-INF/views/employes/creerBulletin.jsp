@@ -19,16 +19,16 @@
 					<div class="form-group">
 						<label for="periode">Periode</label> <select id="periode"
 							name="periode_id">
-							<c:forEach var="periode" items="${periode}">
-								<option value="${periode.id}">${periode.code}</option>
+							<c:forEach var="periode" items="${periodes}">
+								<option value="${periode.id}">${periode.dateDebut} - ${periode.dateFin}</option>
 							</c:forEach>
 						</select>
 					</div>
 					<div class="form-group">
-						<label for="Matricule">Matricule</label> <select id="matricule"
-							name="matricule_id">
-							<c:forEach var="matricule" items="${matricule}">
-								<option value="${matricule.id}">${matricule.denomination}</option>
+						<label for="employe">Matricule</label> <select id="employe"
+							name="employe_id">
+							<c:forEach var="employe" items="${employes}">
+								<option value="${employe.id}">${employe.matricule}</option>
 							</c:forEach>
 						</select>
 					</div>
