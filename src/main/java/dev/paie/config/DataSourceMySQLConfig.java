@@ -11,7 +11,7 @@ public class DataSourceMySQLConfig {
 	@Bean
 	public DataSource dataSource() {
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
-		dataSource.setDriverClassName("org.mariadb.jdbc.Driver");// Todo mariaDB
+		dataSource.setDriverClassName("org.mariadb.jdbc.Driver");
 		dataSource.setUrl("jdbc:mariadb://localhost:3306/sirh.paie");
 		dataSource.setUsername("sirh");
 		dataSource.setPassword("sirh");
