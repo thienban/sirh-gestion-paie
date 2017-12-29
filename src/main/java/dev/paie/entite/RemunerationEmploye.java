@@ -1,7 +1,5 @@
 package dev.paie.entite;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.ZonedDateTime;
 
 import javax.persistence.Column;
