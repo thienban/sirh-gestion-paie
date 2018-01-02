@@ -10,11 +10,24 @@
 </head>
 <body>
 
-	<h1>ICI BIENTOT LISTER !!!!</h1>
-	<ul>
-		<c:forEach var="emp" items="${employes}">
-			<li>${emp.matricule}- ${emp.grade.code} -${emp.dateCreation}</li>
-		</c:forEach>
-	</ul>
+	<h1>LISTE DES COLLABORATEURS</h1>
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<th scope="col">Matricule</th>
+				<th scope="col">Grade</th>
+				<th scope="col">Date Creation</th>
+			</tr>
+		</thead>
+		<tbody>
+			<c:forEach var="emp" items="${employes}">
+				<tr>
+					<td>${emp.matricule}</td>
+					<td>${emp.grade.code}</td>
+					<td>${emp.dateCreation}</td>
+				</tr>
+			</c:forEach>
+		</tbody>
+	</table>
 </body>
 </html>

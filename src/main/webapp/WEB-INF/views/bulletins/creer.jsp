@@ -1,6 +1,7 @@
 <%@page import="java.util.List"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page language="java" pageEncoding="UTF-8"%>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
 
 <!DOCTYPE html>
 <html>
@@ -36,11 +37,13 @@
 						<label>Prime Exceptionnel</label> <input type="text" required
 							name="prime" class="form-control">
 					</div>
+					<div>
+					<button type="submit" class="btn btn-lg btn-info">Creer</button>
+					</div>
+					<sec:csrfInput/>
 				</form>
 			</div>
-			<div>
-				<button type="submit" class="btn btn-lg btn-info">Créer</button>
-			</div>
+			<sec:csrfInput/>
 		</div>
 	</div>
 </body>
