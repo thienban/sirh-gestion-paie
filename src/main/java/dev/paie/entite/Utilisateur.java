@@ -1,14 +1,17 @@
-package dev.paie.entite;
+	package dev.paie.entite;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import net.bytebuddy.dynamic.loading.ClassReloadingStrategy.Strategy;
+
 @Entity
 public class Utilisateur {
-	
 	public enum ROLES {
 		ROLE_ADMINISTRATEUR, ROLE_UTILISATEUR
 	}
@@ -22,7 +25,7 @@ public class Utilisateur {
 	private String motDePasse;
 	@Column
 	private Boolean estActif;
-	@Column
+	@Enumerated(EnumType.STRING)
 	private ROLES role;
 	public Integer getId() {
 		return id;
