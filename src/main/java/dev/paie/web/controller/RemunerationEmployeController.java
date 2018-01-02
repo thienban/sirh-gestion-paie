@@ -56,8 +56,6 @@ public class RemunerationEmployeController {
 		mv.addObject("profil", profil);
 		List<Grade> grade = gradeRepository.findAll();
 		mv.addObject("grade", grade);
-		//instancier la remuneration
-		RemunerationEmploye remunerationEmploye = new RemunerationEmploye();
 		return mv;
 	}
 		
